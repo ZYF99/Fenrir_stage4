@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingTop="10dp"
+              android:paddingBottom="12dp"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp"
+              android:gravity="center">
+
+    <ImageView
+            android:layout_width="132dp"
+            android:layout_height="88dp"
+            android:id="@+id/cell_photography_img"
+            android:layout_weight="0"
+            android:scaleType="centerCrop"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:layout_marginStart="8dp">
+        <TextView
+                android:text="写真でPR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cell_photography_name"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"/>
+        <TextView
+                android:text="PRテキスト1のタイトル（任意項目）最大30文字アイウエオか"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:maxLength="30"
+                android:layout_marginTop="8dp"
+                android:id="@+id/cell_photography_brief"
+                android:layout_weight="0"
+                android:textColor="@color/text_first"/>
+    </LinearLayout>
+</LinearLayout>
