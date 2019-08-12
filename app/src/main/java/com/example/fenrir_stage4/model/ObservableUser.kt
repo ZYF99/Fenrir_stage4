@@ -1,4 +1,4 @@
-package com.example.basetemplate.model
+package com.example.fenrir_stage4.model
 
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable

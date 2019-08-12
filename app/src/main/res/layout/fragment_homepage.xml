@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
                 name="vm"
-                type="com.example.basetemplate.main.ui.homepage.HomepageViewModel"/>
+                type="com.example.fenrir_stage4.mainac.ui.homepage.HomepageViewModel"/>
 
     </data>
     <LinearLayout
@@ -19,10 +19,11 @@
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                 android:id="@+id/refreshlayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
             <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
                     android:background="@color/colorBg"
                     android:id="@+id/mainrec"/>
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
