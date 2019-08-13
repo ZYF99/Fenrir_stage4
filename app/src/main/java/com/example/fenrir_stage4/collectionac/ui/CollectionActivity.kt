@@ -37,13 +37,13 @@ class CollectionActivity : BindingActivity<CollectionBinding, CollectionViewMode
         }
 
 
-        viewModel.jobList.observeForever {
+        viewModel.jobList.observe {
             binding.recCollection.run {
                 (adapter as JobListAdapter).replaceAll(it!!)
             }
         }
 
-        viewModel.count.observeForever {
+        viewModel.count.observe {
             binding.tvTitleSec.text = it
         }
 

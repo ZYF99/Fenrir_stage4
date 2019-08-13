@@ -9,6 +9,8 @@ import androidx.databinding.DataBindingUtil
 
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import io.reactivex.disposables.CompositeDisposable
@@ -61,6 +63,22 @@ abstract class BindingActivity<Bind : ViewDataBinding, VM : AndroidViewModel>
         destroyDisposable()
         super.onDestroy()
     }
+
+
+    //ext
+
+    protected fun <T> LiveData<T>.observe(observer: (T?) -> Unit) where T : Any =
+        observe(this@BindingActivity, Observer<T> { v -> observer(v) })
+
+    protected fun <T> LiveData<T>.observeNonNull(observer: (T) -> Unit) {
+        this.observe(this@BindingActivity, Observer {
+            if (it != null) {
+                observer(it)
+            }
+        })
+    }
+
+
 
     //hide keyBoard
     fun hideKeyboard() {

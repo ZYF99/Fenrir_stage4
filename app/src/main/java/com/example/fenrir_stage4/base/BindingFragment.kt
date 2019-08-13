@@ -25,7 +25,7 @@ abstract class BindingFragment<Bind : ViewDataBinding, VM : AndroidViewModel>
 constructor(
     private val clazz: Class<VM>,
     private val bindingCreator: (LayoutInflater, ViewGroup?) -> Bind
-) : Fragment(),KodeinAware, BindLife {
+) : Fragment(), KodeinAware, BindLife {
 
     constructor(clazz: Class<VM>, @LayoutRes layoutRes: Int) : this(clazz, { inflater, group ->
         DataBindingUtil.inflate(inflater, layoutRes, group, false)
@@ -75,8 +75,6 @@ constructor(
     abstract fun initData()
 
 
-
-
     //ext
 
     protected fun <T> LiveData<T>.observe(observer: (T?) -> Unit) where T : Any =
@@ -91,17 +89,11 @@ constructor(
     }
 
 
-
     //Fragment's destroy function
     override fun onDestroy() {
         destroyDisposable()
         super.onDestroy()
     }
-
-
-
-
-
 
 
     //hide keyBoard
@@ -113,7 +105,6 @@ constructor(
                 InputMethodManager.HIDE_NOT_ALWAYS
             )
     }
-
 
 
 }
