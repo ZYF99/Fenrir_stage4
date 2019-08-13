@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fenrir_stage4.base.BindingFragment
 import com.example.fenrir_stage4.R
 import com.example.fenrir_stage4.databinding.HomepageBinding
-import com.example.fenrir_stage4.utils.SharedPreferencesUtil
 import com.google.android.material.snackbar.Snackbar
 import com.jakewharton.rxbinding2.support.v4.widget.RxSwipeRefreshLayout
 
@@ -49,6 +48,8 @@ class HomepageFragment : BindingFragment<HomepageBinding, HomepageViewModel>(
             }
             .bindLife()
 
+
+
         viewModel.jobList.observe {
             binding.mainrec.run {
                 (adapter as JobListAdapter).replaceAll(it!!)
@@ -61,13 +62,30 @@ class HomepageFragment : BindingFragment<HomepageBinding, HomepageViewModel>(
 
     }
 
-    private fun isNetworkAvailable() = (context?.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager)?.activeNetworkInfo?.isConnected ?: false
+    fun updateListFromDeletes(deleteList: MutableList<String>) {
+        val jobList = viewModel.jobList.value
+        jobList!!.forEach { job ->
+            deleteList.forEach { str ->
+                if (job.id == str) {
+                    job.isCollected = false
+                }
+            }
+        }
+        viewModel.jobList.value = jobList
+    }
+
+
+
+
+    private fun isNetworkAvailable() =
+        (context?.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager)?.activeNetworkInfo?.isConnected
+            ?: false
 
     private fun showNetErrorSnackBar() {
-            Snackbar.make(
-                binding.root,
-                R.string.net_unavailable,
-                Snackbar.LENGTH_LONG
-            ).show()
+        Snackbar.make(
+            binding.root,
+            R.string.net_unavailable,
+            Snackbar.LENGTH_LONG
+        ).show()
     }
 }

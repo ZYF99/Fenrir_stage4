@@ -78,19 +78,19 @@
                     android:layout_marginRight="20dp"
                     android:orientation="horizontal">
 
-                <com.example.common.widget.WheelView
+                <com.example.fenrir_stage4.mainac.ui.widget.WheelView
                         android:id="@+id/year"
                         android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="100dp"/>
 
-                <com.example.common.widget.WheelView
+                <com.example.fenrir_stage4.mainac.ui.widget.WheelView
                         android:id="@+id/month"
                         android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="100dp"/>
 
-                <com.example.common.widget.WheelView
+                <com.example.fenrir_stage4.mainac.ui.widget.WheelView
                         android:id="@+id/day"
                         android:layout_weight="1"
                         android:layout_width="0dp"

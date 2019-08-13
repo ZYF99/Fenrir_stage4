@@ -1,18 +1,15 @@
 package com.example.fenrir_stage4.mainac.ui.homepage
 
 import android.app.Application
-import android.os.Handler
 import androidx.lifecycle.MutableLiveData
 import com.example.fenrir_stage4.manager.api.JobService
 import com.example.fenrir_stage4.base.BaseViewModel
 import com.example.fenrir_stage4.model.Job
 import com.example.fenrir_stage4.utils.SharedPreferencesUtil
-import io.reactivex.Single
 import io.reactivex.SingleTransformer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import org.kodein.di.generic.instance
-import java.util.concurrent.TimeUnit
 
 
 class HomepageViewModel(application: Application) : BaseViewModel(application) {

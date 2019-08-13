@@ -1,4 +1,4 @@
-package com.example.common.widget
+package com.example.fenrir_stage4.mainac.ui.widget
 
 import android.content.Context
 import android.graphics.Paint

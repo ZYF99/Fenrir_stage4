@@ -5,7 +5,7 @@
         <import type="android.view.View"/>
         <variable
                 name="main"
-                type="com.example.basetemplate.main.ui.mine.MineViewModel"/>
+                type="com.example.fenrir_stage4.mainac.ui.mine.MineViewModel"/>
 
     </data>
     <LinearLayout
@@ -41,7 +41,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/text_title"
                     android:id="@+id/tv_title_sec"
-                    android:textSize="16sp"
+                    android:textSize="15sp"
                     app:layout_constraintTop_toBottomOf="@+id/tv_title_fir"
                     android:layout_marginEnd="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -73,16 +73,16 @@
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent" android:gravity="center_horizontal">
 
                 <LinearLayout
                         android:id="@+id/lin_tab"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="9dp"
-                        android:layout_marginRight="9dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginRight="9dp"
                         android:background="@drawable/bg_tabrect"
                         android:orientation="horizontal">
 
@@ -90,23 +90,23 @@
                     <TextView
                             android:text="一覧"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="30dp"
                             android:textColor="@color/colorAccent"
                             android:focusable="true"
                             android:clickable="true"
                             android:padding="6dp"
-                            android:textSize="14sp"
+                            android:textSize="13sp"
                             android:gravity="center"
                             android:id="@+id/tab_1"
                             android:layout_weight="1"/>
                     <TextView
                             android:text="応募情報"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="30dp"
                             android:textColor="@color/colorAccent"
                             android:focusable="true"
                             android:clickable="true"
-                            android:textSize="14sp"
+                            android:textSize="13sp"
                             android:padding="6dp"
                             android:gravity="center"
                             android:id="@+id/tab_2"

@@ -3,9 +3,8 @@ package com.example.fenrir_stage4.mainac.ui.mine
 import android.annotation.SuppressLint
 import android.view.View
 import android.widget.TextView
-import com.example.basetemplate.main.ui.mine.MineViewModel
-import com.example.common.widget.DatePopView
-import com.example.common.widget.JobPopView
+import com.example.fenrir_stage4.mainac.ui.widget.DatePopView
+import com.example.fenrir_stage4.mainac.ui.widget.JobPopView
 import com.example.fenrir_stage4.base.BindingFragment
 import com.example.fenrir_stage4.R
 import com.example.fenrir_stage4.databinding.MineBinding

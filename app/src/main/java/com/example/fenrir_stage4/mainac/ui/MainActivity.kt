@@ -16,15 +16,12 @@ import com.example.fenrir_stage4.base.BindingActivity
 import com.example.fenrir_stage4.R
 import com.example.fenrir_stage4.collectionac.ui.CollectionActivity
 import com.example.fenrir_stage4.databinding.MainBinding
-import com.example.fenrir_stage4.model.Job
 import com.jakewharton.rxbinding2.view.RxView
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import rx_activity_result2.RxActivityResult
-
-
 
 
 @Suppress("UNCHECKED_CAST")
@@ -82,21 +79,19 @@ class MainActivity : BindingActivity<MainBinding, MainViewModel>() {
 
     @SuppressLint("NewApi")
     private fun changeTab(tab: Int) {
-
-
         when (tab) {
             1 -> {
-                binding.tab1.setTextColor(resources.getColor(R.color.colorWhite,theme))
+                binding.tab1.setTextColor(resources.getColor(R.color.colorWhite, theme))
                 binding.tab1.setBackgroundResource(R.drawable.bg_tab_1_selected)
-                binding.tab2.setTextColor(resources.getColor(R.color.colorAccent,theme))
+                binding.tab2.setTextColor(resources.getColor(R.color.colorAccent, theme))
                 binding.tab2.setBackgroundResource(R.drawable.bg_tab_2_nor)
                 fragment = HomepageFragment()
 
             }
             2 -> {
-                binding.tab1.setTextColor(resources.getColor(R.color.colorAccent,theme))
+                binding.tab1.setTextColor(resources.getColor(R.color.colorAccent, theme))
                 binding.tab1.setBackgroundResource(R.drawable.bg_tab_1_nor)
-                binding.tab2.setTextColor(resources.getColor(R.color.colorWhite,theme))
+                binding.tab2.setTextColor(resources.getColor(R.color.colorWhite, theme))
                 binding.tab2.setBackgroundResource(R.drawable.bg_tab_2_selected)
                 fragment = MineFragment()
             }
@@ -136,26 +131,9 @@ class MainActivity : BindingActivity<MainBinding, MainViewModel>() {
             .startIntent(Intent(this, CollectionActivity::class.java))
             .map { result -> result.data() }
             .doOnNext {
-                if(fragment is HomepageFragment){
-
-/*                    val deleteArray:MutableList<String> = it.getSerializableExtra("deleteArray") as MutableList<String>
-                    val jobList = (fragment as HomepageFragment).viewModel.jobList.value
-
-
-                    val newList = jobList!!.flatMap {job ->
-                        deleteArray.map {str ->
-                            if(job.id == str){
-                                job.isCollected = false
-
-                            }
-                        }
-                        jobList
-                    } as MutableList<Job>
-
-                    (fragment as HomepageFragment).viewModel.jobList.value = newList*/
-
-                    (fragment as HomepageFragment).viewModel.init()
-
+                if (fragment is HomepageFragment) {
+                    val deleteArray: MutableList<String> = it.getSerializableExtra("deleteArray") as MutableList<String>
+                    (fragment as HomepageFragment).updateListFromDeletes(deleteArray)
                 }
             }.bindLife()
     }

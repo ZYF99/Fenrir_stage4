@@ -6,7 +6,7 @@
         <import type="android.view.View"/>
         <variable
                 name="userInfo"
-                type="com.example.basetemplate.main.ui.mine.MineViewModel"/>
+                type="com.example.fenrir_stage4.mainac.ui.mine.MineViewModel"/>
 
     </data>
 
@@ -309,7 +309,7 @@
                             android:textColor="@color/text_inputLin_error"
                             android:layout_weight="0"/>
                 </LinearLayout>
-                <com.example.common.widget.SexBox
+                <com.example.fenrir_stage4.mainac.ui.widget.SexBox
                         android:id="@+id/sexbox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -317,7 +317,7 @@
                         android:layout_marginStart="6dp"
                         android:layout_weight="1">
 
-                </com.example.common.widget.SexBox>
+                </com.example.fenrir_stage4.mainac.ui.widget.SexBox>
 
             </LinearLayout>
             <LinearLayout

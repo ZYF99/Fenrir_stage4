@@ -83,7 +83,7 @@ class SharedPreferencesUtil private constructor(context: Context, name: String) 
         }
 
         fun <T : Any> putListData(key: String, list: MutableList<T>): Boolean {
-            var result = true
+            var result: Boolean
             var type = "Boolean"
             if(list.isNotEmpty()){
                 type = list[0].run { javaClass.simpleName }

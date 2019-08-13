@@ -3,7 +3,6 @@ package com.example.fenrir_stage4.mainac.ui.widget
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
-import com.example.common.widget.WheelView
 import com.example.fenrir_stage4.R
 
 class CityPopView(context: Context) : BottomDialogView(context) {

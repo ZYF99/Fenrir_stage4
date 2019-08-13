@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager.widget.ViewPager
@@ -52,7 +53,7 @@ class JobListAdapter(
         //the last stationImage current position
         private var oldStationPage = -1
 
-        val collectionBtn = binding.collectBtn
+        val collectionBtn: LinearLayout = binding.collectBtn
 
         @SuppressLint("SetTextI18n")
         fun onBind(

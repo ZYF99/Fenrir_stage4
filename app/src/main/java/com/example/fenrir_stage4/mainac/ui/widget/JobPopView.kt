@@ -1,10 +1,9 @@
-package com.example.common.widget
+package com.example.fenrir_stage4.mainac.ui.widget
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import com.example.fenrir_stage4.R
-import com.example.fenrir_stage4.mainac.ui.widget.BottomDialogView
 
 class JobPopView(context: Context) : BottomDialogView(context) {
 

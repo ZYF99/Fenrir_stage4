@@ -72,7 +72,7 @@
                 app:layout_constraintBottom_toBottomOf="parent">
 
 
-            <com.example.common.widget.WheelView
+            <com.example.fenrir_stage4.mainac.ui.widget.WheelView
                     android:id="@+id/city"
                     android:layout_weight="1"
                     android:layout_width="match_parent"

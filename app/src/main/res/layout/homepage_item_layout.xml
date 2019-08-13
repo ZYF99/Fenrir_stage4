@@ -15,7 +15,8 @@
             android:foreground="@drawable/selector_cell_click"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusable="true">
+            android:focusable="true"
+            tools:ignore="UnusedAttribute">
 
         <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -258,7 +259,7 @@
                                 android:layout_gravity="top"
                                 app:srcCompat="@drawable/icn_map_detail"
                                 android:id="@+id/imageView2"
-                                android:layout_weight="0"/>
+                                android:layout_weight="0" android:scaleType="centerInside"/>
                         <LinearLayout
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
@@ -382,8 +383,8 @@
                 </LinearLayout>
                 <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="115dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
                         android:layout_gravity="bottom"
                         android:paddingLeft="12dp"
                         android:paddingRight="12dp"
